@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link href="./style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>CofrePassword</title>
+</head>
+<body>
+
+<div id="divForm" class="form">
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">CofrePassword</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Crear cuenta</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Iniciar session</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lista Password</a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+  
+  <label class="allWidth">Seleciona su longitud para su Password:</label>
+  
+  <div class="allWidth">
+	  <label>8</label>
+	  <input type="radio" name="longitud" value=-8>
+	  <label>11</label>
+	  <input type="radio" name="longitud" value=-11>
+  </div>
+  
+  
+  <input class="allWidth btn btn-success" id="buttonGenerarPassword" type="button" value="Generar Password">
+
+  <div id="formPassword" class="allWidth input-group">
+	  <label class="allWidth">Password:</label>
+	  <span class="input-group-addon"><i class="fas fa-key"></i></span> 
+	  <input class="allWidth form-control" id="textPassword" type="text" name="lname" disabled=disabled>
+	  <input class="allWidth btn btn-primary" id="buttonGenerarPassword" type="button" value="Guardar">
+  </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="./source.js"></script>
+
+<script>
+	var cofrePassword = new CofrePassword();
+	cofrePassword.init();
+</script>
+</body>
+</html>
